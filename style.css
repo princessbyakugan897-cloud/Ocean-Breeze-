@@ -1,0 +1,442 @@
+:root {
+  --ink: #20332d;
+  --muted: #6e7b74;
+  --cream: #f6f4ee;
+  --accent: #df805e;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  font-size: 13px;
+}
+
+nav a:hover,
+.text-link:hover {
+  color: var(--accent);
+}
+
+.nav-button {
+  border-bottom: 1px solid var(--ink);
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero {
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  padding: 70px 12%;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(15, 34, 28, .72), rgba(15, 34, 28, .12)),
+    url("sunset.jpg")
+    center 55% / cover;
+}
+
+.hero-content {
+  max-width: 590px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero .eyebrow,
+.contact .eyebrow {
+  color: #f4b99f;
+}
+
+.hero h1,
+.contact h2 {
+  margin: 0;
+  font: 500 clamp(50px, 7vw, 84px) / 1.02 var(--serif);
+  letter-spacing: -2px;
+}
+
+h1 em,
+h2 em {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hero h1 em,
+.contact h2 em {
+  color: #f2b194;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 400px;
+  color: rgba(255, 255, 255, .85);
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 22px 0 28px;
+}
+
+.button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 20px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: white;
+}
+
+.button span {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.section {
+  padding: 95px 12%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+h2 {
+  margin: 0;
+  font: 500 clamp(36px, 5vw, 56px) / 1.1 var(--serif);
+  letter-spacing: -1.5px;
+}
+
+.section-heading > p {
+  max-width: 280px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.destination-card {
+  min-height: 360px;
+  display: flex;
+  align-items: end;
+  padding: 24px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  isolation: isolate;
+}
+
+.destination-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(11, 27, 22, .75), transparent 70%);
+}
+
+.bali {
+  background-image: url("https://trip-na-trip.weebly.com/uploads/8/4/6/5/8465868/6849026_orig.jpg");
+}
+
+.italy {
+  background-image: url("https://i0.wp.com/iaspoint.com/wp-content/uploads/2023/02/mount-mayon.png?resize=1200%2C675&ssl=1");
+}
+
+.japan {
+  background-image: url("https://nationaltoday.com/wp-content/uploads/2022/06/Puerto-Princesa-Underground-River-Day.jpg.webp");
+}
+
+.card-copy span {
+  color: #f3b496;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.card-copy h3 {
+  margin: 9px 0 5px;
+  font: 500 26px var(--serif);
+}
+
+.card-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, .8);
+  font-size: 11px;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e9e9df;
+}
+
+.experience-image {
+  min-height: 480px;
+  background:
+    url("ocean.webp")
+    center / cover;
+}
+
+.experience-copy {
+  align-self: center;
+  padding: 70px 14%;
+}
+
+.experience-copy h2 {
+  margin-bottom: 20px;
+}
+
+.experience-copy > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #aab4ac;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.text-link span {
+  margin-left: 10px;
+  color: var(--accent);
+}
+
+.experiences-list > h2 {
+  margin-bottom: 36px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #d9ddd5;
+}
+
+.experience-grid article {
+  padding: 24px 24px 12px 0;
+}
+
+.experience-grid article + article {
+  padding-left: 24px;
+  border-left: 1px solid #d9ddd5;
+}
+
+.experience-grid article > span {
+  color: var(--accent);
+  font-size: 11px;
+}
+
+.experience-grid h3 {
+  margin: 20px 0 8px;
+  font: 500 22px var(--serif);
+}
+
+.experience-grid p {
+  max-width: 240px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(rgba(20, 43, 34, .72), rgba(20, 43, 34, .72)),
+    url("https://wallpaperaccess.com/full/2181635.jpg")
+    center / cover;
+}
+
+.contact h2 {
+  margin-bottom: 24px;
+  font-size: clamp(40px, 6vw, 62px);
+}
+
+footer {
+  min-height: 80px;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    height: 66px;
+    padding: 0 6%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 560px;
+    padding: 60px 7%;
+    background-position: 60% center;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .section {
+    padding: 70px 7%;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card {
+    min-height: 320px;
+  }
+
+  .experience {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-image {
+    min-height: 300px;
+  }
+
+  .experience-copy {
+    padding: 55px 7%;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-grid article,
+  .experience-grid article + article {
+    padding: 22px 0;
+    border-left: 0;
+    border-bottom: 1px solid #d9ddd5;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    padding: 22px 6%;
+  }
+}
+/* Readability, keyboard access, and layout fixes */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.destination-card {
+  background-color: #52665d;
+}
+
+.card-copy h3 {
+  line-height: 1.15;
+}
+
+.card-copy p {
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .destination-card {
+    min-height: 390px;
+    padding: 18px;
+  }
+
+  .card-copy h3 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
